@@ -1,0 +1,12 @@
+<h1>List of Posts</h1>
+
+{% for post in object_list %}
+    <div>
+        {{ post.title }} | Created By {{ post.author }}
+    </div>
+    <div>
+        {{ post.published_on }}
+    </div>
+    
+
+{% endfor %}
