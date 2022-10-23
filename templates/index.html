@@ -2,16 +2,36 @@
 
 {% block content %}
 
-    <h1>List of Posts</h1>
-    <hr>
+<h1>List of Posts</h1>
+<hr>
 
-    {% for post in object_list %}
-        <div>
+{% for post in object_list %}
+<!-- <div>
             <a href="{% url 'post_view' post.slug %}">{{ post.title }}</a> | Created By: {{ post.author }}
         </div>
         <div>
             Published: {{ post.published_on }}
         </div>
-        <br>
-    {% endfor %}
+        <br> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    {% if 'placeholder' in post.primary_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top" alt="{{ post.title }}">
+                    {% else %}
+                    <img src="{{ post.primary_image.url }}" class="card-img-top" alt="{{ post.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.tag }}</p>
+                        <a href="{% url 'post_view' post.slug %}" class="btn btn-primary">Read This Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
