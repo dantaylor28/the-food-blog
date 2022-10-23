@@ -23,3 +23,9 @@ class PostView(generic.DetailView):
                 'post': post
             },
         )
+
+
+class CreateView(generic.CreateView):
+    model = Post
+    template_name = 'create_post.html'
+    fields = {'title', 'tag', 'body', 'primary_image'}
