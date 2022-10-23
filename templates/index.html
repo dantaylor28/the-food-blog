@@ -1,12 +1,12 @@
 <h1>List of Posts</h1>
+<hr>
 
 {% for post in object_list %}
     <div>
-        {{ post.title }} | Created By {{ post.author }}
+        {{ post.title }} | Created By: {{ post.author }}
     </div>
     <div>
-        {{ post.published_on }}
+       Published: {{ post.published_on }}
     </div>
-    
-
+    <br>
 {% endfor %}
