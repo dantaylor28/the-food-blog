@@ -1,12 +1,17 @@
-<h1>List of Posts</h1>
-<hr>
+{% extends 'base.html' %}
 
-{% for post in object_list %}
-    <div>
-        <a href="{% url 'post_view' post.slug %}">{{ post.title }}</a> | Created By: {{ post.author }}
-    </div>
-    <div>
-       Published: {{ post.published_on }}
-    </div>
-    <br>
-{% endfor %}
+{% block content %}
+
+    <h1>List of Posts</h1>
+    <hr>
+
+    {% for post in object_list %}
+        <div>
+            <a href="{% url 'post_view' post.slug %}">{{ post.title }}</a> | Created By: {{ post.author }}
+        </div>
+        <div>
+            Published: {{ post.published_on }}
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
