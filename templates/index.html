@@ -3,7 +3,7 @@
 
 {% for post in object_list %}
     <div>
-        {{ post.title }} | Created By: {{ post.author }}
+        <a href="{% url 'post_view' post.slug %}">{{ post.title }}</a> | Created By: {{ post.author }}
     </div>
     <div>
        Published: {{ post.published_on }}

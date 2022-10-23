@@ -13,7 +13,7 @@ class HomeView(generic.ListView):
 class PostView(generic.DetailView):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = post.objects.all()
+        queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
 
         return render(
