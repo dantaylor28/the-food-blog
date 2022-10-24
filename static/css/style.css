@@ -1,0 +1,14 @@
+
+/* Blog title styling */
+.title-a-tag {
+    text-decoration: none;
+}
+
+.blog-title {
+    color: #7e7e7e;
+}
+
+.blog-title:hover {
+    color: #565656;
+    transition: 0.3s;
+}

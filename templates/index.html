@@ -13,8 +13,8 @@
             <img src="{{ post.primary_image.url }}" class="card-img-top mt-3" alt="{{ post.title }}">
             {% endif %}
             <div class="card-body">
-                <a href="{% url 'post_view' post.slug %}">
-                    <h2 class="card-title my-3">{{ post.title }}</h2>
+                <a href="{% url 'post_view' post.slug %}" class="title-a-tag">
+                    <h2 class="card-title my-3 blog-title">{{ post.title }}</h2>
                 </a>
                 <div class="text-muted mb-3">
                     <div>
