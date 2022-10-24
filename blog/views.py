@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, EditForm
 
 
 class HomeView(generic.ListView):
@@ -34,4 +34,4 @@ class AddView(generic.CreateView):
 class UpdatePostView(generic.UpdateView):
     model = Post
     template_name = 'edit_post.html'
-    fields = ('title', 'tag', 'body', 'primary_image')
+    form_class = EditForm
