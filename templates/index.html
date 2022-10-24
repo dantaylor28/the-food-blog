@@ -28,6 +28,7 @@
                 <p class="card-text">{{ post.tag }}</p>
                 <a href="{% url 'post_view' post.slug %}" class="btn btn-primary">Read This Post</a>
                 <span><a href="{% url 'edit_post' post.slug %}" class="btn btn-secondary btn-sm">Edit</a></span>
+                <span><a href="{% url 'delete_post' post.slug %}" class="btn btn-secondary btn-sm">Delete</a></span>
             </div>
         </div>
         {% endfor %}
