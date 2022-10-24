@@ -29,4 +29,3 @@ class AddView(generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = 'create_post.html'
-    # fields = ('title', 'slug', 'tag', 'author', 'body', 'primary_image')

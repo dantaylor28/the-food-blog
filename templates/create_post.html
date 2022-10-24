@@ -4,13 +4,13 @@
 {% endblock %}
 
 {% block content %}
-    <h4>Fill in the form below to submit a post </h4>
+    <h4>Fill in the form below to upload a post</h4>
     <hr>
     <br>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-    <button class="btn btn-dark" type="button">Button</button>
+        <button class="btn btn-dark">Upload</button>
 
     </form>
     <br>
