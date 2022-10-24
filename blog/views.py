@@ -7,11 +7,10 @@ class HomeView(generic.ListView):
     model = Post
     template_name = 'index.html'
     queryset = Post.objects.all()
-    paginate_by = 3
+    paginate_by = 4
 
 
 class PostView(generic.DetailView):
-
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
@@ -28,4 +27,4 @@ class PostView(generic.DetailView):
 class AddView(generic.CreateView):
     model = Post
     template_name = 'create_post.html'
-    fields = {'title', 'tag', 'body', 'primary_image'}
+    fields = ('__all__')
