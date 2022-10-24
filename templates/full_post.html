@@ -17,7 +17,7 @@
     </button>
     <ul class="dropdown-menu dropdown-menu-secondary">
       <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
-      <li><a class="dropdown-item" href="#">Delete</a></li>
+      <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
     </ul>
     <a href="{% url 'home' %}" class="btn btn-dark btn-sm">Back To Homepage</a>
   </div>
