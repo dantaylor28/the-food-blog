@@ -15,8 +15,6 @@
 
 /* Allauth authentication page styling */
 
-/* signup.html */
-
 .signin-link {
     text-decoration: none;
     color: #fc766aff;
@@ -27,12 +25,22 @@
     transition: 0.3s;
 }
 
-.signup-btn {
+.allauth-btn {
     background-color: #fc766aff;
     color: white;
 }
 
-.signup-btn:hover {
+.allauth-btn:hover {
     background-color: #783937ff;
     color: white;
+}
+
+.signup-link {
+    text-decoration: none;
+    color: #fc766aff;
+}
+
+.signup-link:hover {
+    color: #783937ff;
+    transition: 0.3s;
 }
