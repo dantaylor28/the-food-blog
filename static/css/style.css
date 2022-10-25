@@ -58,3 +58,26 @@
 .main-title:hover {
     color: #783937ff;
 }
+
+.nav-links {
+    color: #783937ff;
+}
+
+.nav-links:hover {
+    text-decoration: underline;
+}
+
+/* Overwritten default css to match other navigation link styling */
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #783937ff;
+}
+
+.navbar-nav .nav-link.active {
+    color: #783937ff;
+}
+
+.navbar-nav .nav-link.active:hover {
+    text-decoration: underline;
+}
