@@ -44,3 +44,17 @@
     color: #783937ff;
     transition: 0.3s;
 }
+
+/* Header & Navigation styling */
+
+.nav-bg {
+    background-color: #eceae0;
+}
+
+.main-title {
+    color: #783937ff;
+}
+
+.main-title:hover {
+    color: #783937ff;
+}
