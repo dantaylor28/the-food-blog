@@ -78,6 +78,6 @@
     color: #783937ff;
 }
 
-.navbar-nav .nav-link.active:hover {
+.navbar-nav .nav-link:hover {
     text-decoration: underline;
 }
