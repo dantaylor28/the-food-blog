@@ -4,6 +4,7 @@ Delete Your Post
 {% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 
 <div class="text-center">
     <h2>Delete Post: {{ post.title }}</h2>
@@ -18,4 +19,18 @@ Delete Your Post
     <br>
 </div>
 
+{% else %}
+
+    <!-- What will show to unauthorised users who try to access this page. -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+    Oops.. Only registered users can post to this blog
+    <i class="fa-solid fa-face-frown"></i>
+    <br><br>
+    If you want to create your own posts, then please sign up for an account 
+    <a href="{% url 'account_signup' %}" class="signup-link">here!</a>
+    <i class="fa-solid fa-face-grin-stars"></i><br>
+    Already a member? You can sign in <a href="{% url 'account_login' %}" class="signin-link">here.</a>
+
+{% endif %}
 {% endblock %}
