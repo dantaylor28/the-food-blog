@@ -81,3 +81,13 @@
 .navbar-nav .nav-link:hover {
     text-decoration: underline;
 }
+
+.scl-media {
+    border-radius: 50%;
+}
+
+/* Footer */
+
+.scl-media:hover {
+    transition: 0.5s;
+}
