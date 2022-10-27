@@ -13,13 +13,15 @@
 <br><br>
 <div class="dropdown">
   {% if user.is_authenticated %}
-    <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Edit/Delete
-    </button>
-    <ul class="dropdown-menu dropdown-menu-secondary">
-      <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
-      <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
-    </ul>
+    {% if user.id == post.author.id %}
+      <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Edit/Delete
+      </button>
+      <ul class="dropdown-menu dropdown-menu-secondary">
+        <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
+        <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
+      </ul>
+    {% endif %}
   {% endif %}
   <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
 </div>

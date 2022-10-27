@@ -28,8 +28,10 @@
                 <p class="card-text">{{ post.tag }}</p>
                 <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
                 {% if user.is_authenticated %}
-                    <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
-                    <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
+                    {% if user.id == post.author.id %}
+                        <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
+                        <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>

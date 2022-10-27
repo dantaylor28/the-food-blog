@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post, Comment
 from .forms import PostForm, EditForm, CommentForm
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 
 
 class HomeView(generic.ListView):
