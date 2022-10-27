@@ -23,5 +23,24 @@
   {% endif %}
   <a href="{% url 'home' %}" class="btn btn-dark btn-sm">Back To Homepage</a>
 </div>
+<br>
+<h4>Join the conversation</h4>
+<hr>
+{% if post.comments.all %}
+
+  {% for comment in post.comments.all %}
+    <small><strong>By: {{ comment.name }} on {{ comment.date_commented }}</strong></small>
+    <br>
+    {{ comment.body }}
+    <br><br>
+  {% endfor %}
+
+{% else %}
+
+  This post has no comments yet..
+  <br>
+  Feel free to add one below
+
+{% endif %}
 
 {% endblock %}
