@@ -8,5 +8,5 @@ urlpatterns = [
     path('create/post/', AddView.as_view(), name='create_post'),
     path('edit/<slug:slug>/', UpdatePostView.as_view(), name='edit_post'),
     path('delete/<slug:slug>/', DeleteView.as_view(), name='delete_post'),
-    path('<slug:slug>/comment/', CommentView.as_view(), name='add_comment'),
+    path('<int:pk>/comment/', CommentView.as_view(), name='add_comment'),
 ]

@@ -1,4 +1,4 @@
-from .models import Post
+from .models import Post, Comment
 from django import forms
 from cloudinary.forms import CloudinaryFileField
 
@@ -37,7 +37,7 @@ class EditForm(forms.ModelForm):
 
 class CommentForm(forms.ModelForm):
     class Meta:
-        model = CommentForm
+        model = Comment
         fields = ('name', 'body')
 
         widgets = {
