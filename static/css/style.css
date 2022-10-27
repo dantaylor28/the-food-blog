@@ -1,19 +1,18 @@
-
 /* Blog title styling */
 .title-a-tag {
     text-decoration: none;
 }
 
 .blog-title {
-    color: #7e7e7e;
+    color: #783937ff;
 }
 
 .blog-title:hover {
-    color: #565656;
+    text-decoration: underline;
     transition: 0.3s;
 }
 
-/* Allauth authentication page styling */
+/* Button & Anchor Tag Styling */
 
 .signin-link {
     text-decoration: none;
@@ -25,12 +24,22 @@
     transition: 0.3s;
 }
 
-.allauth-btn {
+.bright-btn {
     background-color: #fc766aff;
     color: white;
 }
 
-.allauth-btn:hover {
+.bright-btn:hover {
+    background-color: #783937ff;
+    color: white;
+}
+
+.brown-btn {
+    background-color: #f1ac88ff;
+    color: white;
+}
+
+.brown-btn:hover {
     background-color: #783937ff;
     color: white;
 }
@@ -84,6 +93,12 @@
 
 .scl-media {
     border-radius: 50%;
+}
+
+/* Card Styling */
+
+.card {
+    background-color: #fcfcfc;
 }
 
 /* Footer */

@@ -13,7 +13,7 @@
 <br><br>
 <div class="dropdown">
   {% if user.is_authenticated %}
-    <button class="btn btn-dark dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Edit/Delete
     </button>
     <ul class="dropdown-menu dropdown-menu-secondary">
@@ -21,7 +21,7 @@
       <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
     </ul>
   {% endif %}
-  <a href="{% url 'home' %}" class="btn btn-dark btn-sm">Back To Homepage</a>
+  <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
 </div>
 <br>
 <h4>Join the conversation</h4>
@@ -42,7 +42,7 @@
   
 {% endif %}
 {% if user.is_authenticated %}
-  <a href="{% url 'add_comment' post.pk %}" class="btn btn-sm allauth-btn">Add Comment</a>
+  <a href="{% url 'add_comment' post.pk %}" class="btn btn-sm bright-btn">Add Comment</a>
 {% else %}
 
   Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to leave a comment
