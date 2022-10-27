@@ -5,17 +5,25 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    <h4>Make any changes you want and resubmit the form below</h4>
-    <hr>
-    <br>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn bright-btn">Update</button>
+    {% if user.id == post.author.id %}
+        <h4>Make any changes you want and resubmit the form below</h4>
+        <hr>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn bright-btn">Update</button>
 
-    </form>
-    <br>
-
+        </form>
+        <br>
+    {% else %}
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                Oops.. Only the author of this post can make changes or delete it.
+                <i class="fa-solid fa-face-frown"></i>
+            </div>
+        </div> 
+    {% endif %}       
 {% else %}
 
     <!-- What will show to unauthorised users who try to access this page. -->
