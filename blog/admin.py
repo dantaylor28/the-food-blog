@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 
 
 @admin.register(Post)
@@ -8,3 +8,10 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('published_on',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ('title', 'author',)
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('body', 'name', 'date_commented',)
+    list_filter = ('date_commented',)
+    search_fields = ('name', 'post',)
