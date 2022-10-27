@@ -91,3 +91,7 @@
 .scl-media:hover {
     transition: 0.5s;
 }
+
+.page-footer {
+    background-color: #eceae0;
+}
