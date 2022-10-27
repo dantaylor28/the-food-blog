@@ -89,9 +89,15 @@
 /* Footer */
 
 .scl-media:hover {
+    border: 1px solid #783937ff;
+    border-radius: 50%;
     transition: 0.5s;
 }
 
 .page-footer {
     background-color: #eceae0;
+}
+
+i {
+    color: #783937ff;
 }
