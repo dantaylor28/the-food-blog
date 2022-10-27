@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add A Comment
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h4>Fill in the form below to post a comment</h4>
+    <hr>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-dark">Post</button>
+
+    </form>
+    <br>
+
+{% else %}
+
+    <!-- What will show to unauthorised users who try to access this page. -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+    Oops.. Only registered users can comment on this blog
+    <i class="fa-solid fa-face-frown"></i>
+    <br><br>
+    If you want to create your own posts & comment, then please sign up for an account 
+    <a href="{% url 'account_signup' %}" class="signup-link">here!</a>
+    <i class="fa-solid fa-face-grin-stars"></i><br>
+    Already a member? You can sign in <a href="{% url 'account_login' %}" class="signin-link">here.</a>
+
+
+{% endif %}
+{% endblock %}
