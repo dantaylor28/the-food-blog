@@ -33,3 +33,14 @@ class EditForm(forms.ModelForm):
         }
 
         primary_image = CloudinaryFileField()
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = CommentForm
+        fields = ('name', 'body')
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
