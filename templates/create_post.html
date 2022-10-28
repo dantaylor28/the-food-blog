@@ -16,6 +16,11 @@
     </form>
     <br>
 
+    <script>
+        var name = '{{ user.id }}'
+        document.getElementById('author').value = name
+    </script>
+
 {% else %}
 
     <!-- What will show to unauthorised users who try to access this page. -->
