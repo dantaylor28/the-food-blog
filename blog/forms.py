@@ -8,11 +8,10 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'tag', 'author', 'body', 'primary_image')
+        fields = ('title', 'slug', 'author', 'body', 'primary_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Blog Title:'}),
-            'tag': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'id': 'author', 'value': '', 'type': 'hidden'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
@@ -25,11 +24,10 @@ class EditForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'tag', 'body', 'primary_image')
+        fields = ('title', 'body', 'primary_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Blog Title:'}),
-            'tag': forms.TextInput(attrs={'class': 'form-control'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
         }
 
