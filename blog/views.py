@@ -14,15 +14,20 @@ class HomeView(generic.ListView):
 
 
 class PostView(generic.DetailView):
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         return render(
             request,
             'full_post.html',
             {
-                'post': post
+                'post': post,
+                'liked': liked
             },
         )
 
