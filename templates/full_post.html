@@ -4,75 +4,108 @@
 {% endblock %}
 
 {% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1 class="post-titles">{{ post.title }}</h1>
+      <small>Published by: {{ post.author }}</small>
+      <hr>
+      <br>
+      {{ post.body|safe }}
+      <br><br>
+    </div>
+    <div class="col-md-8 mt-3 offset-md-2">
+      {% if user.is_authenticated %}
+      <form action="{% url 'like_post' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+        <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+          <i class="fa-solid fa-heart like-btn"></i>
+        </button>
+        {% else %}
+        <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+          <i class="fa-regular fa-heart like-btn"></i>
+        </button>
+        {% endif %}
+        <strong><span>{{ post.num_of_likes }}</span></strong>
+      </form>
+      {% else %}
+      <i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
+      <strong><span class="mgn-spc">{{ post.num_of_likes }}</span></strong>
+      <span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to like
+        posts!</span>
+      {% endif %}
+    </div>
+    <div class="col-md-8 mt-3 offset-md-2">
+      <div class="dropdown">
+        {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
+        <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Edit/Delete
+        </button>
+        <ul class="dropdown-menu dropdown-menu-secondary">
+          <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
+          <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
+        </ul>
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
 
-<h1 class="post-titles">{{ post.title }}</h1>
-<small>Published by: {{ post.author }}</small>
-<hr>
-<br>
-{{ post.body|safe }}
-<br><br>
+    <div class="col-md-8 mt-3 offset-md-2">
+      <br>
+      <h4>Join the conversation</h4>
+      {% if user.is_authenticated %}
+      <a href="{% url 'add_comment' post.pk %}" class="btn btn-sm bright-btn">Add Comment</a>
+      <hr>
+      <br>
+      {% else %}
 
-{% if user.is_authenticated %}
-<form action="{% url 'like_post' post.slug %}" method="POST">
-  {% csrf_token %}
-  {% if liked %}
-  <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
-    <i class="fa-solid fa-heart like-btn"></i>
-  </button>
-  {% else %}
-  <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
-    <i class="fa-regular fa-heart like-btn"></i>
-  </button>
-  {% endif %}
-  <strong><span>{{ post.num_of_likes }}</span></strong>
-</form>
-{% else %}
-<i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
-<strong><span class="mgn-spc">{{ post.num_of_likes }}</span></strong>
-<span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to like posts!</span>
-{% endif %}
+      Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to leave a comment
+      <br><br>
 
-  <div class="dropdown">
-    {% if user.is_authenticated %}
-    {% if user.id == post.author.id %}
-    <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Edit/Delete
-    </button>
-    <ul class="dropdown-menu dropdown-menu-secondary">
-      <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
-      <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
-    </ul>
-    {% endif %}
-    {% endif %}
+      {% endif %}
+      {% if post.comments.all %}
+
+      {% for comment in post.comments.all %}
+      <small><strong>By: {{ comment.name }} on {{ comment.date_commented }}</strong></small>
+      <br>
+      {{ comment.body }}
+      <br><br>
+      {% endfor %}
+
+      {% else %}
+
+      This post has no comments yet..
+      <br><br>
+
+      {% endif %}
+      <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
+      <br><br>
+    </div>
   </div>
+</div>
+  <footer class="text-center page-footer">
+    <div class="container">
+      <a href="https://www.facebook.com/" target="_blank" class="btn m-1 scl-media">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" class="btn m-1 scl-media">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" class="btn m-1 scl-media">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://www.pinterest.co.uk/" target="_blank" class="btn m-1 scl-media">
+        <i class="fa-brands fa-pinterest"></i>
+      </a>
+      <a href="https://www.linkedin.com/feed/" target="_blank" class="btn m-1 scl-media">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <br>
+      <span class="copyright"><small>&copy Copyright 2022: pp4-food-blog.herokuapp.com</small></span>
+      <br><br>
+  </footer>
 
-<br>
-<h4>Join the conversation</h4>
-{% if user.is_authenticated %}
-<a href="{% url 'add_comment' post.pk %}" class="btn btn-sm bright-btn">Add Comment</a>
-<hr>
-<br>
-{% else %}
-
-Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to leave a comment
-<br><br>
-
-{% endif %}
-{% if post.comments.all %}
-
-{% for comment in post.comments.all %}
-<small><strong>By: {{ comment.name }} on {{ comment.date_commented }}</strong></small>
-<br>
-{{ comment.body }}
-<br><br>
-{% endfor %}
-
-{% else %}
-
-This post has no comments yet..
-<br><br>
-
-{% endif %}
-<a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
-<br><br>
 {% endblock %}
