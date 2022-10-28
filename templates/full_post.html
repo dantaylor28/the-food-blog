@@ -28,6 +28,7 @@
 </form>
 {% else %}
 <i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
+<strong><span class="mgn-spc">{{ post.num_of_likes }}</span></strong>
 <span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to like posts!</span>
 {% endif %}
 
