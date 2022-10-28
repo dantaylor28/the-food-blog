@@ -25,19 +25,25 @@
     {% endif %}
   {% endif %}
   <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
+  <br><br>
   {% if user.is_authenticated %}
       <form action="{% url 'like_post' post.slug %}" method="POST">
         {% csrf_token %}
         {% if liked %}
-          <button type="submit" name="post_id" value="{{ post.slug }}">Unlike</button>
+          <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+            <i class="fa-solid fa-heart like-btn"></i>
+          </button>
         {% else %}
-          <button type="submit" name="post_id" value="{{ post.slug }}">Like</button>
+          <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+            <i class="fa-regular fa-heart like-btn"></i>
+          </button>
         {% endif %}
+        <span>{{ post.num_of_likes }}</span>
       </form>
   {% else %}
-      <p>Login to like posts.</p>
+      <i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
+      <span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">login</a> to like posts!</span>
   {% endif %}
-  {{ post.num_of_likes }}
 </div>
 
 <br>

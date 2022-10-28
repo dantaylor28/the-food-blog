@@ -120,3 +120,17 @@ i {
 .copyright {
     color: #783937ff;
 }
+
+/* Like Button Styling */
+
+.like-btn {
+    color: #fc766aff;
+}
+
+.heart-crack {
+    font-size: 20px;
+}
+
+.login-txt {
+    margin-left: 20px;
+}
