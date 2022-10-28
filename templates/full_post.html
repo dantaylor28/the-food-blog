@@ -11,6 +11,7 @@
 <br>
 {{ post.body }}
 <br><br>
+
 <div class="dropdown">
   {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
@@ -24,7 +25,21 @@
     {% endif %}
   {% endif %}
   <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
+  {% if user.is_authenticated %}
+      <form action="{% url 'like_post' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+          <button type="submit" name="post_id" value="{{ post.slug }}">Unlike</button>
+        {% else %}
+          <button type="submit" name="post_id" value="{{ post.slug }}">Like</button>
+        {% endif %}
+      </form>
+  {% else %}
+      <p>Login to like posts.</p>
+  {% endif %}
+  {{ post.num_of_likes }}
 </div>
+
 <br>
 <h4>Join the conversation</h4>
 {% if user.is_authenticated %}
