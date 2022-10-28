@@ -12,65 +12,65 @@
 {{ post.body }}
 <br><br>
 
-<div class="dropdown">
-  {% if user.is_authenticated %}
-    {% if user.id == post.author.id %}
-      <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Edit/Delete
-      </button>
-      <ul class="dropdown-menu dropdown-menu-secondary">
-        <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
-        <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
-      </ul>
-    {% endif %}
-  {% endif %}
-  <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
-  <br><br>
-  {% if user.is_authenticated %}
-      <form action="{% url 'like_post' post.slug %}" method="POST">
-        {% csrf_token %}
-        {% if liked %}
-          <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
-            <i class="fa-solid fa-heart like-btn"></i>
-          </button>
-        {% else %}
-          <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
-            <i class="fa-regular fa-heart like-btn"></i>
-          </button>
-        {% endif %}
-        <span>{{ post.num_of_likes }}</span>
-      </form>
+{% if user.is_authenticated %}
+<form action="{% url 'like_post' post.slug %}" method="POST">
+  {% csrf_token %}
+  {% if liked %}
+  <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+    <i class="fa-solid fa-heart like-btn"></i>
+  </button>
   {% else %}
-      <i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
-      <span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">login</a> to like posts!</span>
+  <button type="submit" name="post_id" class="btn btn-lg" value="{{ post.slug }}">
+    <i class="fa-regular fa-heart like-btn"></i>
+  </button>
   {% endif %}
-</div>
+  <strong><span>{{ post.num_of_likes }}</span></strong>
+</form>
+{% else %}
+<i class="fa-solid fa-heart-crack like-btn heart-crack"></i>
+<span class="login-txt">Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to like posts!</span>
+{% endif %}
+
+  <div class="dropdown">
+    {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
+    <button class="btn dropdown-toggle btn-sm bright-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Edit/Delete
+    </button>
+    <ul class="dropdown-menu dropdown-menu-secondary">
+      <li><a class="dropdown-item active" href="{% url 'edit_post' post.slug %}">Edit This Post</a></li>
+      <li><a class="dropdown-item" href="{% url 'delete_post' post.slug %}">Delete</a></li>
+    </ul>
+    {% endif %}
+    {% endif %}
+  </div>
 
 <br>
 <h4>Join the conversation</h4>
 {% if user.is_authenticated %}
-  <a href="{% url 'add_comment' post.pk %}" class="btn btn-sm bright-btn">Add Comment</a>
-  <hr>
-  <br>
+<a href="{% url 'add_comment' post.pk %}" class="btn btn-sm bright-btn">Add Comment</a>
+<hr>
+<br>
 {% else %}
 
-  Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to leave a comment
-  <br><br>
+Please <a href="{% url 'account_login' %}" class="signin-link">sign in</a> to leave a comment
+<br><br>
 
 {% endif %}
 {% if post.comments.all %}
 
-  {% for comment in post.comments.all %}
-    <small><strong>By: {{ comment.name }} on {{ comment.date_commented }}</strong></small>
-    <br>
-    {{ comment.body }}
-    <br><br>
-  {% endfor %}
+{% for comment in post.comments.all %}
+<small><strong>By: {{ comment.name }} on {{ comment.date_commented }}</strong></small>
+<br>
+{{ comment.body }}
+<br><br>
+{% endfor %}
 
 {% else %}
 
-  This post has no comments yet..
-  <br><br>
-  
+This post has no comments yet..
+<br><br>
+
 {% endif %}
+<a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
 {% endblock %}
