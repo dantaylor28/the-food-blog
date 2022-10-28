@@ -25,7 +25,7 @@
                         <span>to add tags</span>
                     </div>
                 </div>
-                <p class="card-text">Label goes here</p>
+                <p class="card-text">{{ post.extract }}</p>
                 <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}

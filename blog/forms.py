@@ -8,10 +8,11 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'author', 'body', 'primary_image')
+        fields = ('title', 'extract', 'slug', 'author', 'body', 'primary_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Blog Title:'}),
+            'extract': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Brief Description Of Post:'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'id': 'author', 'value': '', 'type': 'hidden'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
