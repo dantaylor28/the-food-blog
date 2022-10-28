@@ -9,7 +9,7 @@
 <small>Published by: {{ post.author }}</small>
 <hr>
 <br>
-{{ post.body }}
+{{ post.body|safe }}
 <br><br>
 
 {% if user.is_authenticated %}
@@ -74,4 +74,5 @@ This post has no comments yet..
 
 {% endif %}
 <a href="{% url 'home' %}" class="btn btn-sm bright-btn">Back To Homepage</a>
+<br><br>
 {% endblock %}

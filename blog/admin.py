@@ -4,7 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Post)
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'published_on', 'updated_on',)
     list_filter = ('published_on',)
     prepopulated_fields = {'slug': ('title',)}

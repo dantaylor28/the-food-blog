@@ -11,6 +11,7 @@
         <br>
         <form method="POST">
             {% csrf_token %}
+            {{ body|safe }}
             {{ form.as_p }}
             <button class="btn bright-btn">Update</button>
 
