@@ -72,3 +72,11 @@ class LikeView(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_view', args=[slug]))
+
+
+# Function view to render posts within the same category to
+# 'category_page.html'
+
+def CategoryView(request, type):
+    posts = Post.objects.filter(category=type)
+    return render(request, 'category_page.html', {'type': type, 'posts': posts})
