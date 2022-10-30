@@ -33,11 +33,12 @@ class EditForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'extract', 'body', 'primary_image')
+        fields = ('title', 'extract', 'category', 'body', 'primary_image')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'extract': forms.TextInput(attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=categories, attrs={'class': 'form-control'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
         }
 
