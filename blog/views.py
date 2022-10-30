@@ -85,4 +85,9 @@ class LikeView(View):
 
 def CategoryView(request, type):
     posts = Post.objects.filter(category__iexact=type.replace('-', ' '))
-    return render(request, 'category_page.html', {'type': type.replace('-', ' '), 'posts': posts})
+    context = {}
+    context['type'] = type.replace('-', ' ')
+    context['posts'] = posts
+    category_menu = Category.objects.all()
+    context['category_menu'] = category_menu
+    return render(request, 'category_page.html', context)
