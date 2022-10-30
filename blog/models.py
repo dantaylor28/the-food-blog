@@ -14,6 +14,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     primary_image = CloudinaryField('image', default='placeholder')
     extract = models.CharField(max_length=300)
+    category = models.CharField(max_length=75, default='food')
 
     def get_absolute_url(self):
         return reverse('home')
@@ -26,6 +27,16 @@ class Post(models.Model):
 
     def num_of_likes(self):
         return self.likes.count()
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=75)
+
+    def get_absolute_url(self):
+        return reverse('home')
+
+    def __str__(self):
+        return self.name
 
 
 class Label(models.Model):
