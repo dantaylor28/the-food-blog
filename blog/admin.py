@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Label
+from .models import Post, Comment, Label, Category
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,4 +21,9 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
+    search_fields = ('name',)
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name',)
