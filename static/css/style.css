@@ -101,6 +101,17 @@
     background-color: #fcfcfc;
 }
 
+.cgry-btn {
+    text-decoration: none;
+    color: #783937ff;
+}
+
+.cgry-btn:hover {
+    text-decoration: underline;
+    color: #783937ff;
+    transition: 0.3s;
+}
+
 /* Footer */
 
 .scl-media:hover {

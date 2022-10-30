@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <p class="card-text">{{ post.extract }}</p>
-                <p>See more <a href="{% url 'category' post.category %}">{{ post.category }}</a> posts!</p>
+                <p>See more <a href="{% url 'category' post.category %}" class="cgry-btn">{{ post.category }}</a> posts!</p>
                 <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
