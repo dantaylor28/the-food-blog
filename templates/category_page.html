@@ -1,80 +1,91 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ type }}</h1>
-<div class="container mt-5">
-    <div class="row">
-        {% for post in posts %}
-        <div class="card col-lg-6 offset-lg-3 mb-3">
-            {% if 'placeholder' in post.primary_image.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top mt-3"
-                        alt="{{ post.title }}">
-            {% else %}
-            <img src="{{ post.primary_image.url }}" class="card-img-top mt-3" alt="{{ post.title }}">
-            {% endif %}
-            <div class="card-body">
-                <a href="{% url 'post_view' post.slug %}" class="title-a-tag">
-                    <h2 class="card-title my-3 blog-title">{{ post.title }}</h2>
-                </a>
-                <div class="text-muted mb-3">
-                    <div>
-                        <span>By: {{ post.author }} |</span>
-                        <span>Published On: {{ post.published_on }}</span>
-                    </div>
-                    <div>
-                        <span>to add tags</span>
-                    </div>
-                </div>
-                <p class="card-text">{{ post.extract }}</p>
-                <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
-                {% if user.is_authenticated %}
-                    {% if user.id == post.author.id %}
-                        <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
-                        <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
-                    {% endif %}
+{% if posts %}
+    <div class="container mt-5">
+        <div class="row">
+            <h1 class="text-center">{{ type }}</h1>
+            {% for post in posts %}
+            <div class="card col-lg-6 offset-lg-3 mb-3">
+                {% if 'placeholder' in post.primary_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top mt-3"
+                            alt="{{ post.title }}">
+                {% else %}
+                <img src="{{ post.primary_image.url }}" class="card-img-top mt-3" alt="{{ post.title }}">
                 {% endif %}
+                <div class="card-body">
+                    <a href="{% url 'post_view' post.slug %}" class="title-a-tag">
+                        <h2 class="card-title my-3 blog-title">{{ post.title }}</h2>
+                    </a>
+                    <div class="text-muted mb-3">
+                        <div>
+                            <span>By: {{ post.author }} |</span>
+                            <span>Published On: {{ post.published_on }}</span>
+                        </div>
+                        <div>
+                            <span>to add tags</span>
+                        </div>
+                    </div>
+                    <p class="card-text">{{ post.extract }}</p>
+                    <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
+                    {% if user.is_authenticated %}
+                        {% if user.id == post.author.id %}
+                            <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
+                            <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
+                        {% endif %}
+                    {% endif %}
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
 
-{% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn btn-lg bright-btn">&laquo; Prev Page </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn btn-lg bright-btn "> Next Page &raquo;</a></li>
+    {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn btn-lg bright-btn">&laquo; Prev Page </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn btn-lg bright-btn "> Next Page &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-<footer class="text-center page-footer">
-    <div class="container p-4">
-        <section>
-            <a href="https://www.facebook.com/" target="_blank" class="btn m-1 scl-media">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" class="btn m-1 scl-media">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank" class="btn m-1 scl-media">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://www.pinterest.co.uk/" target="_blank" class="btn m-1 scl-media">
-                <i class="fa-brands fa-pinterest"></i>
-            </a>
-            <a href="https://www.linkedin.com/feed/" target="_blank" class="btn m-1 scl-media">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <br>
-            <span class="copyright"><small>&copy Copyright 2022: pp4-food-blog.herokuapp.com</small></span>
-        </section>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
     </div>
-</footer>
+    <footer class="text-center page-footer">
+        <div class="container p-4">
+            <section>
+                <a href="https://www.facebook.com/" target="_blank" class="btn m-1 scl-media">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="btn m-1 scl-media">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="btn m-1 scl-media">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.pinterest.co.uk/" target="_blank" class="btn m-1 scl-media">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="btn m-1 scl-media">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <br>
+                <span class="copyright"><small>&copy Copyright 2022: pp4-food-blog.herokuapp.com</small></span>
+            </section>
+        </div>
+    </footer>
+{% else %}
+
+    <!-- What will show if users try to access a category page that
+    does not exist. -->
+<div class="row">
+    <div class="col-md-8 mt-5 offset-md-2">
+        Oops.. This page doesn't exist
+        <i class="fa-solid fa-face-grimace"></i>
+
+{% endif %}
 
 {% endblock %}
