@@ -12,6 +12,12 @@ class HomeView(generic.ListView):
     queryset = Post.objects.all()
     paginate_by = 4
 
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Category.objects.all()
+        context = super(HomeView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
+
 
 class PostView(generic.DetailView):
 
