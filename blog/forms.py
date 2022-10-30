@@ -1,7 +1,14 @@
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from django import forms
 from cloudinary.forms import CloudinaryFileField
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
+category_choices = Category.objects.all().values_list('name', 'name')
+categories = []
+
+
+for category in category_choices:
+    categories.append(category)
 
 
 class PostForm(forms.ModelForm):
@@ -13,7 +20,7 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Blog Title:'}),
             'extract': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Brief Description Of Post:'}),
-            'category': forms.Select(attrs={'class': 'form-control'}),
+            'category': forms.Select(choices=categories, attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'id': 'author', 'value': '', 'type': 'hidden'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
