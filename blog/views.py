@@ -78,5 +78,5 @@ class LikeView(View):
 # 'category_page.html'
 
 def CategoryView(request, type):
-    posts = Post.objects.filter(category=type)
+    posts = Post.objects.filter(category__iexact=type)
     return render(request, 'category_page.html', {'type': type, 'posts': posts})
