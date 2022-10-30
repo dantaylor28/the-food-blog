@@ -14,7 +14,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     primary_image = CloudinaryField('image', default='placeholder')
     extract = models.CharField(max_length=300)
-    category = models.CharField(max_length=75, default='food')
+    category = models.CharField(max_length=75)
 
     def get_absolute_url(self):
         return reverse('home')
