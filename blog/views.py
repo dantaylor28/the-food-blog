@@ -43,11 +43,23 @@ class AddView(generic.CreateView):
     form_class = PostForm
     template_name = 'create_post.html'
 
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Category.objects.all()
+        context = super(AddView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
+
 
 class UpdatePostView(generic.UpdateView):
     model = Post
     template_name = 'edit_post.html'
     form_class = EditForm
+
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Category.objects.all()
+        context = super(UpdatePostView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
 
 
 class DeleteView(generic.DeleteView):
@@ -55,11 +67,23 @@ class DeleteView(generic.DeleteView):
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Category.objects.all()
+        context = super(DeleteView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
+
 
 class CommentView(generic.CreateView):
     model = Comment
     template_name = 'add_comment.html'
     form_class = CommentForm
+
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Category.objects.all()
+        context = super(CommentView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
@@ -81,7 +105,8 @@ class LikeView(View):
 
 
 # Function view to render posts within the same category to
-# 'category_page.html'
+# 'category_page.html'. Also retrieves all category names and adds them
+# to the dropdown navbar.
 
 def CategoryView(request, type):
     posts = Post.objects.filter(category__iexact=type.replace('-', ' '))
