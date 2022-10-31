@@ -110,12 +110,19 @@
 .cgry-btn:hover {
     text-decoration: underline;
     color: #783937ff;
-    transition: 0.3s;
 }
 
 .ftrd-img {
     max-height: 600px;
     object-fit: cover;
+}
+
+/* Media query to prevent image heights being more than 300px */
+@media screen and (max-width: 500px) {
+    .ftrd-img {
+        max-height: 300px;
+        object-fit: cover;
+    }
 }
 
 .card-like-btn {
