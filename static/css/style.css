@@ -112,6 +112,11 @@
     transition: 0.3s;
 }
 
+.ftrd-img {
+    max-height: 600px;
+    object-fit: cover;
+}
+
 /* Footer */
 
 .scl-media:hover {
