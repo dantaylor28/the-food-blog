@@ -11,6 +11,18 @@ Users have the ability to register for an account and this will then allow them 
 ### Home Page
 (Home Screen Image)
 
+This is the initial page users visiting the site will land on. At the very top is the blog name alongside the navigation links leading to other pages of the website. These links will change depending on what area of the site you are on and whether or not you are signed in with your account. There is the standard login, logout and register for an account buttons. On top of that, there is also a browse categories dropdown list. This makes it quick and easy to find whatever it is that you are interested in reading.
+
+Directly underneath the navigation, there is a intoductory paragraph welcoming visitors to the site along with a brief description of what you can find and do while visiting the blog site.
+
+The rest of the content on this home page are blog posts that have been uploaded by other people. A maximum of four posts are present per page before it is paginated and will have to click next to explore more posts. Each blog is displayed in a card showing a large image, the blog title and a brief introductory text outlining the content incase you wish to open the post and read further. The purpose of the image is to give the reader an insight into what content the blog contains without having to open the post first. Since the majority of posts on the site are recipes, it makes sense to attach an image of the finished dish here. 
+
+Each blog uploaded gets assiged to a category chosen by the author at the time of publication. Also on the card is a link that if clicked, will take you to more posts within the same category as the one you are reading. The purpose of this is to make it as simple as possible to find blogs that you are interested in. The number of likes each post has is also present here. If you want to like a post yourself, you will have to open it fully first and also be a registered user.
+
+If you are the user that uploaded the post, you will see two extra buttons, edit and delete. These are present to make it as simle as possible to make changes or completely delete a blog that you uploaded. Clicking either of these buttons will take you a seperate page where you can make any changes you desire before being redirected back to the homepage. Authentication is present to ensure only the author of the post is the one that has access to this functionality.
+
+Lastly at the bottom of the home page, you will find the footer. I kept this very clean and simple. It contains links to all the relevant social media and standard copyright information.
+
 ### Full Blog Post Page
 (Blog Post Image)
 
