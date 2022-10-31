@@ -105,8 +105,19 @@ The login for the superuser account is as follows -
 ***Username - admin***\
 ***Password - esporta1993***
 
-
 # Future Features To Implement
+
+- Contact Form with EmailJS functionality
+This was a feature that I originally hoped to include in my project. The ability to reach out to the site admin is a useful feature for any website, as any questions or issues can be sent directly to the person responsible which makes good customer service. 
+
+- Newsletter With Monthly Updates
+The ability to reach out directly with your registered users is a great addition for any blog site. Its good for keeping people updated on important information, newly released content or special offers. 
+
+- Video Recipe Walkthroughs
+This is an extra feature that I would of loved to have the time to try and implement. I am one of the many people that really learn by watching and introducing this ability would be especially helpful on a cooking tutorial/recipe blog such as this.
+
+- Sign In With Social Media
+This was another feature that I planned to implement in the planning stages of this project, but unfortunately did not have time to implement. This is just much better user experience and makes the signing in/out alot more hassle free.
 
 # The Agile Approach
 
