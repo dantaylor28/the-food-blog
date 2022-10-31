@@ -3,10 +3,11 @@
 
 {% block content %}
 {% if posts %}
+    <img src="{% static 'images/category-img.png' %}" class="banner-img" alt="category image">
     <div class="container mt-5">
         <div class="row">
-            <h1 class="text-center">{{ type }}</h1>
-            <img src="{% static 'images/category-img.png' %}" alt="category image">
+            <!-- <h1 class="text-center">{{ type }}</h1> -->
+            <!-- <img src="{% static 'images/category-img.png' %}" alt="category image"> -->
             {% for post in posts %}
             <div class="card col-lg-6 offset-lg-3 mb-3">
                 {% if 'placeholder' in post.primary_image.url %}
