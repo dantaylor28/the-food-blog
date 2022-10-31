@@ -63,6 +63,8 @@ Very similar to the edit page above, this option is only available to authors of
 
 ### Sign In/Out Page
 
+For all the authentication on this blog site, I used the Django AllAuth built in authentication system. This comes with already made html pages for signing in and out. These pages can be accessed and edited which I have the documented steps outlined further on in this read-me.
+
 ### Register An Account Page
 
 
@@ -70,3 +72,6 @@ color scheme
 
 bugs 
 - slug field on form 
+
+
+write how to edit allauth html pages
