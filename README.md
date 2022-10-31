@@ -197,6 +197,8 @@ DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL))}
 * Connect to your GitHub account and type your repository name 
 * Click deploy and your project should now be live
 
+The link to my live website can be found at - https://pp4-food-blog.herokuapp.com/
+
 
 # Testing
 
