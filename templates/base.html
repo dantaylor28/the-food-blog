@@ -44,22 +44,24 @@
                     {% endif %}
                     <!-- Code for category drop-down menu that loops through all categories
                     and adds them to the drop-down list -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-links" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Browse Categories
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% for item in category_menu %}
-                                <li><a class="dropdown-item"
-                                    href="{% url 'category' item|slugify %}">{{ item }}</a></li>
-                            {% endfor %}
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
+                    {% if category_menu %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-links" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                {% for item in category_menu %}
+                                    <li><a class="dropdown-item"
+                                        href="{% url 'category' item|slugify %}">{{ item }}</a></li>
+                                {% endfor %}
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
