@@ -118,6 +118,23 @@ You can find my user stories listed under the issues section of my GitHub reposi
 
 # Languages/Libraries Used
 
+- Django
+- Python
+- HTML/CSS
+- Bootstrap
+- Cloudinary
+- AllAuth Authentication
+- Summernote Text Editor
+
+This project was built primarily using Django and Python languages. HTML was also used throughout to implement numerous different webpages. The majority of styling throughout the site was done using Bootstrap classes, but to customise these further I implemented my own custom CSS styling to overwrite some of the more standard bootstrap style classes.
+
+I used Cloudinary for some of the image file storage. This is because Django uses an ephemeral file system, so Cloudinary was a good choice to prevent my image files from being deleted after a certain amount of time has passed. For other image files, I used standard static file storage in my Gitpod workspace.
+
+As stated earlier in this read-me, Django's own AllAuth authentication system was used in this project for signing in, signing out and registering an account. In order to customise the already created HTML files I had to input the following command into my terminal to copy the files and save them in my own workspace - 
+cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./templates
+
+To allow users to upload a fully formatted blog post, with customisable text, styles and colours I used the text editor Summernote. This editor can be used in the admin panel as well as on my template pages including the 'Upload Post' and 'Edit Post' pages.
+
 # Deployment
 
 ## Local Deployment
