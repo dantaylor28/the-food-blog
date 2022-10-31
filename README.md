@@ -88,7 +88,11 @@ There is a welcome message at the top of the page which also has a link incase y
 
 # The Agile Approach
 
+Throughout the planning stages of this project, I tried my best to implement Agile best practises. Before starting with any practical elements of this website, the first thing I did was write out a list of user stories with perspectives from a site user, a registered user and lastly the site admin. Accompanying each user story is a list of the required tasks needed to fully implement the new feature. I referenced back to the user stories regularly throughout production, updating them when a new feature was completed, as well as adding new stories and removing others that no longer applied.
 
+I attached labels to each user story, which were to represent how many story points each one was worth. Throughout the production, I became aware of a number of them where the amount points assigned were not a true representation of how long it took to implement the feature. Certain bugs would sometimes slow me down significantly or I just misjudged how long it would take to realistically accomplish what it was I was trying to achieve. On the other hand, there were also times when things went much smoother than I anticipated and so I completed for example, an eight point user story a lot quicker than what I though it would take. I see this to be a learning process as it is my first time attempting to use a true agile approach. Hopefully, the more projects I work on in the future, the more accurate I will become at predicting workloads and the time it takes to implement the features.
+
+You can find my user stories listed under the issues section of my GitHub repository, along with how many story points each one represents. I also used the projects tab and the kanban board as shown in the Django Blog walkthrough project to keep track of my user stories and move them from the In-Progress to Done throughout the development. This helped me considerably to understand what I had left to implement while also keeping my motivation high as those small steps soon add up to a considerable portion of work being completed successfully.
 
 
 color scheme
