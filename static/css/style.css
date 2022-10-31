@@ -60,6 +60,8 @@
 
 .nav-links {
     color: #783937ff;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
 }
 
 .nav-links:hover {
