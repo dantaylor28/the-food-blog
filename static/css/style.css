@@ -155,6 +155,24 @@ i {
     margin-left: 10px;
 }
 
+/* Categories page styling */
+
 .banner-img {
     width: 100%;
+}
+
+.img-container {
+    position: relative;
+}
+
+.category-txt {
+    position: absolute;
+    min-width: 30%;
+    bottom: 20%;
+    right: 36%;
+    text-align: center;
+    background: rgba(236, 234, 224, 0.5);
+    font-size: 60px;
+    color: #783937ff;
+    border-radius: 25%;
 }
