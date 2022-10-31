@@ -172,10 +172,9 @@ i {
     right: 36%;
     text-align: center;
     background: rgba(252, 118, 106, 0.5);
-    font-size: 50px;
+    font-size: 4.5vw;
     color: white;
     border-radius: 15%;
     text-transform: capitalize;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 5px;
 }
