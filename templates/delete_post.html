@@ -7,7 +7,7 @@ Delete Your Post
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
         <div class="row">
-            <div class="col-md-8 mt-3 offset-md-2">
+            <div class="col-md-8 mt-5 offset-md-2">
                 <h3>Delete Post: {{ post.title }}</h3>
                 <form method="POST">
                     {% csrf_token %}

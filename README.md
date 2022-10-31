@@ -214,6 +214,13 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 ## Unfixed Bugs
 
+ - One bug I encountered was with the footer refusing to stay at the bottom of the page if there wasn't enough content on the page. The only pages where this is now an issue, is with the sign-in/sign-out and register for an account page. Because of this I removed the footer all together from these pages.
+
+ - When creating a blog post from the html page via the form, users have to manually add the slug field themselves. I wanted to figure out how I could get the slug to generate itself from the blog title but unfortunately I didn't have time to fix this before my submission. Just to give users some kind of guidance, I added a placeholder explaining how to format the slug so it is accepted and appropriate to the blog content.
+
+ - The navigation dropdown link listing the blog categories would not loop through them correctly and work as intended on the full_post.html page. I managed to add the correct code to my views.py file on all other views except for this one. I didn't have the time to squash this bug before my deadline so to get around it, I removed the nav-link from the page entirely. 
+
+
 ## Fixed Bugs
 
 # Credits
@@ -222,9 +229,3 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 
 color scheme
-
-bugs 
-- slug field on form 
-
-
-write how to edit allauth html pages
