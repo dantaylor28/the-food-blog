@@ -146,6 +146,12 @@ cp -r ../.pip-modules/lib/python3.8/site-packages/allauth/templates/* ./template
 
 To allow users to upload a fully formatted blog post, with customisable text, styles and colours I used the text editor Summernote. This editor can be used in the admin panel as well as on my template pages including the 'Upload Post' and 'Edit Post' pages.
 
+# Colour Scheme 
+
+I looked through many different websites to try and gather some ideas for implementing color into the site. I eventually decided on my own take of the below color scheme. I wanted to use bright, vibrant colours that would attract peoples attention and fit the vibe of the recipe/food blog.
+
+(color scheme pic here)
+
 # Deployment
 
 ## Local Deployment
@@ -227,11 +233,16 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 - Implementing a feature so the user would not have to manually select which blog post you want to comment on every time. Originally, you would have to choose from a dropdown list even after navigating directly from the psot you wanted to comment on. I fixed this problem by defining a form_valid function, by which I could then associate the post ID with the comment resulting in the blog post being auto selected. 
 
-
-
 # Credits
 
+ - Code Institute Slack groups most notably the project-portfolio-4 & project-milestone-4 groups. Almost every question I had, I could find an answer for in these groups!
 
+ - I Think Therfore I Blog Code Institute walkthrough project. This walkthrough really helped me wrap my head around the Django language and how to navigate the numerous files that you have to set up.
 
+- I researched from numerous sources the best way to implement CRUD functionality and this helped me to implement it in my project. 
 
-color scheme
+- I used Canva to crop and edit numerous images I used in this website.
+
+- I used the following website to decide on what color scheme to implement for my ptoject -
+https://webflow.com/blog/best-color-combinations
+
