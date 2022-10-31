@@ -9,7 +9,7 @@ from .forms import PostForm, EditForm, CommentForm
 class HomeView(generic.ListView):
     model = Post
     template_name = 'index.html'
-    queryset = Post.objects.all()
+    queryset = Post.objects.filter(status=1).order_by('-published_on')
     paginate_by = 4
 
     def get_context_data(self, *args, **kwargs):
