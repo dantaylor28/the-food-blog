@@ -6,7 +6,7 @@ Users have the ability to register for an account and this will then allow them 
 
 (Insert AmIResponsive image here)
 
-## Current Features
+# Current Features
 
 ### Home Page
 (Home Screen Image)
@@ -85,6 +85,10 @@ The sign-out page is just as simple, consisting of only a message asking if you'
 Registering for an account uses the same AllAuth authentication system as above. This page contains four form fields, a username, an optional email field, a password and a repeat password box. 
 
 There is a welcome message at the top of the page which also has a link incase you have an account registered with us already. The username input has to be unique to yourself, and optionally you can also provide us with an email address. Lastly, there is a standard password field which you have to repeat in a second box. Once the form is filled in, click the sign-up button and then registration is complete.
+
+# The Agile Approach
+
+
 
 
 color scheme
