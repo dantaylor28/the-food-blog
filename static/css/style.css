@@ -83,6 +83,20 @@
     text-decoration: underline;
 }
 
+/* Introduction text styling */
+
+.intro-container {
+    background-color: #783937ff;
+}
+
+.intro-text {
+    color: #eceae0;
+}
+
+.intro-title {
+    text-align: center;
+}
+
 /* Card Styling */
 
 .title-a-tag {

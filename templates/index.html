@@ -2,8 +2,17 @@
 
 {% block content %}
 
-<div class="container mt-5">
-    <div class="row">
+<div class="row intro-container">
+    <div class="col-md-10 mt-5 offset-md-1 intro-text">
+        <h2 class="intro-title">Welcome to the food blog!</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum justo quis ex sollicitudin, eget convallis sem varius. Ut ac imperdiet lectus. Mauris quis posuere elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce fringilla egestas rhoncus. Fusce viverra leo libero, vel rhoncus sapien malesuada vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin dapibus lectus cursus massa pharetra faucibus. Curabitur facilisis lectus eget nulla condimentum, iaculis suscipit leo accumsan. Nulla et vehicula mi. Nulla mi ex, placerat ac cursus et, tincidunt a enim. Pellentesque vitae maximus erat. Sed mi est, rutrum ac elit ac, feugiat gravida quam. Donec egestas, leo in egestas viverra, augue erat consequat orci, eu dictum mauris nulla tempus ex.
+
+            Maecenas et tristique neque. Curabitur tellus lorem, tincidunt sed pellentesque ut, ultrices sit amet ligula. Proin non erat lorem. In efficitur, libero ac pretium vestibulum, nisl tellus porta nunc, ut rutrum purus turpis in nulla. Duis imperdiet facilisis mauris. Phasellus venenatis nulla sed dictum congue. In vitae elementum quam. Nullam accumsan finibus ante, ut luctus ligula pulvinar vel. Duis maximus mi urna, vitae blandit enim dapibus ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce non consectetur nunc. Sed non ante at sapien efficitur tempus sit amet iaculis odio.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-5">
         {% for post in object_list %}
         <div class="card col-lg-8 offset-lg-2 mb-2">
             {% if 'placeholder' in post.primary_image.url %}
