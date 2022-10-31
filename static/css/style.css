@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 /* Blog title styling */
 .title-a-tag {
     text-decoration: none;
@@ -62,6 +65,7 @@
 
 .main-title {
     color: #783937ff;
+    font-family: Pacifico, cursive;
 }
 
 .main-title:hover {
@@ -177,4 +181,5 @@ i {
     border-radius: 15%;
     text-transform: capitalize;
     padding: 5px;
+    font-family: Pacifico, cursive;
 }
