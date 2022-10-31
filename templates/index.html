@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="intro-container">
@@ -19,7 +20,7 @@
         {% for post in object_list %}
         <div class="card col-lg-8 offset-lg-2 mb-2">
             {% if 'placeholder' in post.primary_image.url %}
-            <img src="https://www.prixintrablog.com/wp-content/uploads/2020/05/Start-Food-Blog.jpg" class="card-img-top mt-3"
+            <img src="{% static 'images/placeholder-img.png' %}" class="card-img-top mt-3"
                         alt="{{ post.title }}">
             {% else %}
             <img src="{{ post.primary_image.url }}" class="card-img-top mt-3 ftrd-img" alt="{{ post.title }}">
