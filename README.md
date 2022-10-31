@@ -223,6 +223,12 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 ## Fixed Bugs
 
+- While attempting to delete blog posts from within the website, I had an error stating I needed to provide a success_url for after a post is deleted. After researching, I discovered the url from my post model would not work as I had to import reverse_lazy as the standard reverse would not work in this instance.
+
+- Implementing a feature so the user would not have to manually select which blog post you want to comment on every time. Originally, you would have to choose from a dropdown list even after navigating directly from the psot you wanted to comment on. I fixed this problem by defining a form_valid function, by which I could then associate the post ID with the comment resulting in the blog post being auto selected. 
+
+
+
 # Credits
 
 
