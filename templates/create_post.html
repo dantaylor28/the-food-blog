@@ -10,7 +10,7 @@ Upload A Post
         <h4>Fill in the form below to upload a post</h4>
         <hr>
         <br>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ body|safe }}
             {{ form.as_p }}
