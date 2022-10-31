@@ -155,7 +155,7 @@ The points below outline the steps that I took to deploy my project to a local s
 * Create a new GitHub repository 
 * Select the Code-Institute-Full-Template and name your repository
 * Press the Gitpod button to open a new Gitpod workspace
-* Download all the required dependencies. Django, Psycopg2 etc
+* Download all the required dependencies. Django, Psycopg2, gunicorn etc
 * Create a requirements.txt file using command pip3 freeze --local > requirements.txt
 * Create a new Django project using command django-admin startproject "project-name-here" .
 * Create a new app using command python3 manage.py startapp "app-name-here"
@@ -165,6 +165,38 @@ The points below outline the steps that I took to deploy my project to a local s
 * The project should now be running locally on port 8000
 
 ## Live Deployment
+
+The steps outlined below, document the steps taken to deploy my live project to Heroku
+
+* On GitHub, I forked my repository so it is not deleted after inactivity
+* Navigate to Heroku.com, sign into your account and create a new app 
+* I named my app pp4-food-blog and picked the European region
+* Go to the Resources tab, search for PostGres and confirm 
+* Submit the order to confirm you want to use the PostGres database
+* Create an env.py file on top level of your file system
+* Import os to env.py file and copy your database-url from heroku config vars
+* Create your variables in the env.py file - os.environ.get['DATABASE_URL'] = 'copied url from heroku'
+* Create your own secret_key variable and add to env.py as outlined above
+* Add secret_key value to config vars on heroku
+* Navigate to settings.py file
+* import os & dj_database_url
+* Also add - if os.path.isfile(env.py): import env
+* Replace secret variable on settings.py with os.environ.get('secret_key')
+* Comment out databases section on settings.py and replace with 
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL))}
+* You're now using Postgres database on the backend
+* Migrate changes the same way as outlined above
+* Add PORT and value 8000 to heroku config vars
+* In settings.py file, add code TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+* In TEMPLATES - DIRS add the value [TEMPLATES_DIR]
+* In ALLOWED_HOSTS add ["'app-name-here'.herokuapp.com", 'localhost']
+* Create a procfile on top level of your file system
+* Add code to procfile - web:gunicorn 'app-name-here'.wsgi
+* Commit and push changes to Github
+* Navigate to Deploy tab on heroku
+* Connect to your GitHub account and type your repository name 
+* Click deploy and your project should now be live
+
 
 # Testing
 
