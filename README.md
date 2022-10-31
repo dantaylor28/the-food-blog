@@ -38,7 +38,16 @@ The same applies as above for the comments section. Any comments the post has re
 
 At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
 
-### Upload Post Page
+### Upload Blog Page
+(Upload blog image)
+
+When you are all signed up with an account, the 'Upload Post' page will then become available for you to use! This is the page you will be using to uplaod all of your wonderful recipe ideas. 
+
+The format of the page is a form primarily, composing of the fields you will need to fill in to upload a post. At the very top, is a line of text outlining the steps to fill out the form correctly. The form consists of six fields that are to be filled in. Most of them are self explanatory such as the title, extract and category. One or two of them are a little bit more complicated such as the 'slug' field. This is the url that will be displayed for the post that you create for example /your-first-post/. There is a placeholder telling you to include the - symbol between words so the slug is accepted. The ideal situation would be for this to be automatically generated from the title but unfortunataly, I did not get time to implement this before my submission date.
+
+Underneath the slug field, is the main body of the blog post that you will create. I implemented a text editor called summernote here, so you have more capabilities to format and customise your posts. The editor includes options to change fonts, colours, add pictures and much, much more. Getting this implemented into the form was imperative, to ensure the content being put out is posted with the correct formatting and so its as simple as possible to put together a good-looking blog.
+
+The last field on the form is the ability to attach a picture which will feature as the primary image on the home screen of the website. It is not possible to see an example of how it will look so its quite important that the image you use is the correct size so it is not altered in any way. If it does not come out as expected, theres no need to worry as this can be swapped out easily in the edit page which is described in more detail below.
 
 ### Edit Blog Page
 
@@ -50,3 +59,6 @@ At the very bottom of the page is one last button, that if clicked will take you
 
 
 color scheme
+
+bugs 
+- slug field on form 
