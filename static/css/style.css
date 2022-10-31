@@ -1,19 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-
-/* Blog title styling */
-.title-a-tag {
-    text-decoration: none;
-}
-
-.blog-title {
-    color: #783937ff;
-}
-
-.blog-title:hover {
-    text-decoration: underline;
-    transition: 0.3s;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
 
 /* Button & Anchor Tag Styling */
 
@@ -66,6 +51,7 @@
 .main-title {
     color: #783937ff;
     font-family: Pacifico, cursive;
+    font-size: 30px;
 }
 
 .main-title:hover {
@@ -95,11 +81,20 @@
     text-decoration: underline;
 }
 
-.scl-media {
-    border-radius: 50%;
+/* Card Styling */
+
+.title-a-tag {
+    text-decoration: none;
 }
 
-/* Card Styling */
+.blog-title {
+    color: #783937ff;
+}
+
+.blog-title:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
 
 .card {
     background-color: #fcfcfc;
@@ -145,6 +140,10 @@ i {
     color: #783937ff;
 }
 
+.scl-media {
+    border-radius: 50%;
+}
+
 /* Like Button Styling */
 
 .like-btn {
@@ -186,4 +185,15 @@ i {
     text-transform: capitalize;
     padding: 5px;
     font-family: Pacifico, cursive;
+}
+
+/* Full_post.html styling */
+
+.post-titles {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+}
+
+#blog-post-title {
+    color: #783937ff;
 }
