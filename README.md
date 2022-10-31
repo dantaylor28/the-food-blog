@@ -8,7 +8,7 @@ Users have the ability to register for an account and this will then allow them 
 
 # Current Features
 
-### Home Page
+## Home Page
 (Home Screen Image)
 
 This is the initial page users visiting the site will land on. At the very top is the blog name alongside the navigation links leading to other pages of the website. These links will change depending on what area of the site you are on and whether or not you are signed in with your account. There is the standard login, logout and register for an account buttons. On top of that, there is also a browse categories dropdown list. This makes it quick and easy to find whatever it is that you are interested in reading.
@@ -23,7 +23,7 @@ If you are the user that uploaded the post, you will see two extra buttons, edit
 
 Lastly at the bottom of the home page, you will find the footer. I kept this very clean and simple. It contains links to all the relevant social media and standard copyright information.
 
-### Full Blog Post Page
+## Full Blog Post Page
 (Blog Post Image)
 
 When a user clicks on a link to open a post fully, they are greeted with a fully formatted, traditonal blog post layout. The blog title is displayed in a large header tag at the top of the page, with further information stating the author and when the post was created/last updated.
@@ -38,7 +38,7 @@ The same applies as above for the comments section. Any comments the post has re
 
 At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
 
-### Blog Category Page
+## Blog Category Page
 (blog category pic)
 
 From the navigation menu at the top of the website, you can use the dropdown 'Browse Categories' to pick what type of blogs or recipes you would like to see. When you have made a selection, you will be taken to the categories section of the website.
@@ -47,7 +47,7 @@ At the top of the page, you are greeted with a large banner image along with the
 
 The page layout is very similar to the home page, the obvious exception to this being that you can now easily find a specific recipe or cuisine much faster than scrolling through the entirety of the site.
 
-### Upload Blog Page
+## Upload Blog Page
 (Upload blog image)
 
 When you are all signed up with an account, the 'Upload Post' page will then become available for you to use! This is the page you will be using to uplaod all of your wonderful recipe ideas. 
@@ -58,19 +58,26 @@ Underneath the slug field, is the main body of the blog post that you will creat
 
 The last field on the form is the ability to attach a picture which will feature as the primary image on the home screen of the website. It is not possible to see an example of how it will look so its quite important that the image you use is the correct size so it is not altered in any way. If it does not come out as expected, theres no need to worry as this can be swapped out easily in the edit page which is described in more detail below.
 
-### Edit Blog Page
+## Edit Blog Page
 (Edit post page pic)
 
 The edit post page can be accessed either on the home page or at the bottom of the actual blog post when it is opened fully. Only you who wrote the post has access to this page so you don't have to worry about anybody else editing or deleting your blogs.
 
 This page is very similar to the previous 'Upload a Blog' page, with just a few minor differences. The edit page lets you change everything except the slug field. All of the content that you have wrote here previously is present, and you are free to change whatever you like and then click the update button. Any changes will be saved and you will then be redirected to the home page with a freshly updated post.
 
-### Delete Blog Page
+## Delete Blog Page
 (Delete post page pic)
 
 Very similar to the edit page above, this option is only available to authors of the particular post. Clicking this button redirects you to a seperate delete page, where you then need to confirm your decision by clicking 'Delete post'. This page contains nothing more than a button and a message stating this decision cannot be changed. Once deleted, your post is removed from the database and will consequently disappear from the website.
 
-### Sign In/Out Page
+## Commenting Page
+(comment section pic)
+
+If you are signed in and wish to comment on a blog post, you will find a button at the bottom of any post which when clicked takes you to the add comment page. In order to stop the page becoming too congested, I decided to add this feature on a seperate HTML page. 
+
+It is a simple form page, with just two fields. One for your name and another for the comment. If you wish to stay anonymous, you can leave the name field blank or input something different than your real name. When you click post comment, you are redirected and the comment will be posted to the corresponding blog post, with the name you rovided and the date you wrote it.
+
+## Sign In/Out Page
 (signin/out pages pic)
 
 For all the authentication on this blog site, I used the Django AllAuth built in authentication system. This comes with already made html pages for signing in and out. These pages can be accessed and edited which I have the documented steps outlined further on in this read-me. 
@@ -79,12 +86,18 @@ The sign-in page consists of a message welcoming you back to the blog and a link
 
 The sign-out page is just as simple, consisting of only a message asking if you're sure you want to log out and a sign-out button.
 
-### Register An Account Page
+## Register An Account Page
 (register account pic)
 
 Registering for an account uses the same AllAuth authentication system as above. This page contains four form fields, a username, an optional email field, a password and a repeat password box. 
 
 There is a welcome message at the top of the page which also has a link incase you have an account registered with us already. The username input has to be unique to yourself, and optionally you can also provide us with an email address. Lastly, there is a standard password field which you have to repeat in a second box. Once the form is filled in, click the sign-up button and then registration is complete.
+
+## The Admin Panel
+(admin panel pic)
+
+
+# Future Features To Implement
 
 # The Agile Approach
 
@@ -93,6 +106,34 @@ Throughout the planning stages of this project, I tried my best to implement Agi
 I attached labels to each user story, which were to represent how many story points each one was worth. Throughout the production, I became aware of a number of them where the amount points assigned were not a true representation of how long it took to implement the feature. Certain bugs would sometimes slow me down significantly or I just misjudged how long it would take to realistically accomplish what it was I was trying to achieve. On the other hand, there were also times when things went much smoother than I anticipated and so I completed for example, an eight point user story a lot quicker than what I though it would take. I see this to be a learning process as it is my first time attempting to use a true agile approach. Hopefully, the more projects I work on in the future, the more accurate I will become at predicting workloads and the time it takes to implement the features.
 
 You can find my user stories listed under the issues section of my GitHub repository, along with how many story points each one represents. I also used the projects tab and the kanban board as shown in the Django Blog walkthrough project to keep track of my user stories and move them from the In-Progress to Done throughout the development. This helped me considerably to understand what I had left to implement while also keeping my motivation high as those small steps soon add up to a considerable portion of work being completed successfully.
+
+# Languages/Libraries Used
+
+# Deployment
+
+## Local Deployment
+
+## Main Deployment
+
+# Testing
+
+## Manual Testing
+
+## Automatic Testing
+
+## Validator Testing
+
+## Lighthouse Results
+
+# Bugs
+
+## Unfixed Bugs
+
+## Fixed Bugs
+
+# Credits
+
+
 
 
 color scheme
