@@ -121,6 +121,10 @@
     object-fit: cover;
 }
 
+.card-like-btn {
+    margin-left: 30px;
+}
+
 /* Footer */
 
 .scl-media:hover {

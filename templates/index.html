@@ -33,6 +33,15 @@
                 <p class="card-text">{{ post.extract }}</p>
                 <p>See more <a href="{% url 'category' post.category|slugify %}" class="cgry-btn">{{ post.category }}</a> posts!</p>
                 <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
+                <span class="card-like-btn">
+                    <i class="fa-solid fa-heart like-btn heart-crack"></i>
+                    <strong><span class="mgn-spc">{{ post.num_of_likes }}</span></strong>
+                    {% if post.num_of_likes == 1 %}
+                        <span> person likes this</span>
+                    {% else %}
+                        <span> people like this</span>
+                    {% endif %}
+                </span>
             </div>
         </div>
         {% endfor %}
