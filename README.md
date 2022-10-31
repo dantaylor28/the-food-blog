@@ -1,4 +1,4 @@
-# My Food Blog PP4
+# The Food Blog PP4
 
 The website I decided to make is a food blog which lets users visiting the site, explore numerous different recipes, while also sharing their own cooking tips and tricks. The goal of the blog site is to give people an easily accessible website to find delicious recipes, and to also give users their own platform to be able to share their love of cooking and baking with the world. This blog is aimed at anybody that has a passion for cooking and wants to discover new recipes or ideas. Also, people who just want to share their own thoughts and opinions on anything food related will feel welcome in this friendly, passionate community.
 
@@ -204,7 +204,6 @@ DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL))}
 * Click deploy and your project should now be live
 
 The link to my live website can be found at - https://pp4-food-blog.herokuapp.com/
-
 
 # Testing
 
