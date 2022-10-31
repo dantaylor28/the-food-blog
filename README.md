@@ -38,6 +38,15 @@ The same applies as above for the comments section. Any comments the post has re
 
 At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
 
+### Blog Category Page
+(blog category pic)
+
+From the navigation menu at the top of the website, you can use the dropdown 'Browse Categories' to pick what type of blogs or recipes you would like to see. When you have made a selection, you will be taken to the categories section of the website.
+
+At the top of the page, you are greeted with a large banner image along with the title of the category that you have selected. The content on this page is determined by which category is chosen by the user when uploading a blog post. As the amount of content on this site grows, more categories are sure to be added but for the time being I am trying to keep the amount under ten. I considered adding the functionality to let users create their own categories, but I came to the conclusion that this would very quickly become too much to handle. Therfore, I have left the decision to add more categories up to the site admin.
+
+The page layout is very similar to the home page, the obvious exception to this being that you can now easily find a specific recipe or cuisine much faster than scrolling through the entirety of the site.
+
 ### Upload Blog Page
 (Upload blog image)
 
@@ -50,22 +59,32 @@ Underneath the slug field, is the main body of the blog post that you will creat
 The last field on the form is the ability to attach a picture which will feature as the primary image on the home screen of the website. It is not possible to see an example of how it will look so its quite important that the image you use is the correct size so it is not altered in any way. If it does not come out as expected, theres no need to worry as this can be swapped out easily in the edit page which is described in more detail below.
 
 ### Edit Blog Page
-(Edit post page)
+(Edit post page pic)
 
 The edit post page can be accessed either on the home page or at the bottom of the actual blog post when it is opened fully. Only you who wrote the post has access to this page so you don't have to worry about anybody else editing or deleting your blogs.
 
 This page is very similar to the previous 'Upload a Blog' page, with just a few minor differences. The edit page lets you change everything except the slug field. All of the content that you have wrote here previously is present, and you are free to change whatever you like and then click the update button. Any changes will be saved and you will then be redirected to the home page with a freshly updated post.
 
 ### Delete Blog Page
-(Delete post page)
+(Delete post page pic)
 
 Very similar to the edit page above, this option is only available to authors of the particular post. Clicking this button redirects you to a seperate delete page, where you then need to confirm your decision by clicking 'Delete post'. This page contains nothing more than a button and a message stating this decision cannot be changed. Once deleted, your post is removed from the database and will consequently disappear from the website.
 
 ### Sign In/Out Page
+(signin/out pages pic)
 
-For all the authentication on this blog site, I used the Django AllAuth built in authentication system. This comes with already made html pages for signing in and out. These pages can be accessed and edited which I have the documented steps outlined further on in this read-me.
+For all the authentication on this blog site, I used the Django AllAuth built in authentication system. This comes with already made html pages for signing in and out. These pages can be accessed and edited which I have the documented steps outlined further on in this read-me. 
+
+The sign-in page consists of a message welcoming you back to the blog and a link to register for an account if you have not yet signed up. Below this is a username and password field with a 'remember me' check box. Its a simply styled, standard sign-in page and once all fields are filled in you can then click sign in.
+
+The sign-out page is just as simple, consisting of only a message asking if you're sure you want to log out and a sign-out button.
 
 ### Register An Account Page
+(register account pic)
+
+Registering for an account uses the same AllAuth authentication system as above. This page contains four form fields, a username, an optional email field, a password and a repeat password box. 
+
+There is a welcome message at the top of the page which also has a link incase you have an account registered with us already. The username input has to be unique to yourself, and optionally you can also provide us with an email address. Lastly, there is a standard password field which you have to repeat in a second box. Once the form is filled in, click the sign-up button and then registration is complete.
 
 
 color scheme
