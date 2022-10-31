@@ -107,16 +107,16 @@ The login for the superuser account is as follows -
 
 # Future Features To Implement
 
-- Contact Form with EmailJS functionality
+## Contact Form with EmailJS functionality
 This was a feature that I originally hoped to include in my project. The ability to reach out to the site admin is a useful feature for any website, as any questions or issues can be sent directly to the person responsible which makes good customer service. 
 
-- Newsletter With Monthly Updates
+## Newsletter With Monthly Updates
 The ability to reach out directly with your registered users is a great addition for any blog site. Its good for keeping people updated on important information, newly released content or special offers. 
 
-- Video Recipe Walkthroughs
+## Video Recipe Walkthroughs
 This is an extra feature that I would of loved to have the time to try and implement. I am one of the many people that really learn by watching and introducing this ability would be especially helpful on a cooking tutorial/recipe blog such as this.
 
-- Sign In With Social Media
+## Sign In With Social Media
 This was another feature that I planned to implement in the planning stages of this project, but unfortunately did not have time to implement. This is just much better user experience and makes the signing in/out alot more hassle free.
 
 # The Agile Approach
@@ -150,7 +150,21 @@ To allow users to upload a fully formatted blog post, with customisable text, st
 
 ## Local Deployment
 
-## Main Deployment
+The points below outline the steps that I took to deploy my project to a local server - 
+
+* Create a new GitHub repository 
+* Select the Code-Institute-Full-Template and name your repository
+* Press the Gitpod button to open a new Gitpod workspace
+* Download all the required dependencies. Django, Psycopg2 etc
+* Create a requirements.txt file using command pip3 freeze --local > requirements.txt
+* Create a new Django project using command django-admin startproject "project-name-here" .
+* Create a new app using command python3 manage.py startapp "app-name-here"
+* Add the above app name to list of installed apps in settings.py file
+* Migrate these changes using command python3 manage.py migrate
+* Run the project using command python3 manage.py runserver
+* The project should now be running locally on port 8000
+
+## Live Deployment
 
 # Testing
 
