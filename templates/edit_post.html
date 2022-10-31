@@ -11,12 +11,11 @@
             <h4>Make any changes you want and resubmit the form below</h4>
             <hr>
             <br>
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ body|safe }}
                 {{ form.as_p }}
                 <button class="btn bright-btn">Update</button>
-
             </form>
             <br>
         {% else %}
