@@ -96,6 +96,15 @@ There is a welcome message at the top of the page which also has a link incase y
 ## The Admin Panel
 (admin panel pic)
 
+One of the first steps undertaken in development was the creation of the administration panel and registering the admin superuser. This account then has full CRUD functionality over every post and comment on the website. 
+
+Upon doing this I also customised the admin panel to make it easier to manage posts and track there created date, author etc. On the panel you can filter posts and publish user created draft posts to the live site. Theres a seperate panel for all of the comments that can also be filtered through so they are easily manageable. If a post or comment needs to be modified or deleted entirely, it is super simple to tracl it down and perform this operation from the admin panel.
+
+The login for the superuser account is as follows -
+
+***Username - admin***\
+***Password - esporta1993***
+
 
 # Future Features To Implement
 
