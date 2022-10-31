@@ -26,6 +26,18 @@ Lastly at the bottom of the home page, you will find the footer. I kept this ver
 ### Full Blog Post Page
 (Blog Post Image)
 
+When a user clicks on a link to open a post fully, they are greeted with a fully formatted, traditonal blog post layout. The blog title is displayed in a large header tag at the top of the page, with further information stating the author and when the post was created/last updated.
+
+The way the blog is laid out in relation to the formatting and inclusion of images is totally up to the person who uploaded it. Most of the blog posts currently uploaded contain pictures at the top of the page as I feel anyone visiting the site will get drawn in more by images along with quality text content that follows it. 
+
+As blogs have to be approved by the admin before publication, this helps to ensure the content being shared is relevant to the sites purpose and that the quality of the posts are up to the standard that the site admin would like. Adding to that, it is a much easier way to monitor posts rather than having to manually scroll through every published blog and pick out any for editing or deletion incase of a error or misuse of the platform.
+
+Directly under the blog content, is a like button and a section containing the comments. Here it once again shows the number of likes the post, but this time also with the ability to like the post yourself. You can click the like button only if you are signed in. If not, there is a comment explaining this and a link that will take you to the 'Register for an account' page.
+
+The same applies as above for the comments section. Any comments the post has received already are displayed here, along with the name of the user and the date it was made. If you are a signed in user, you can click the 'Add comment' button and be taken to the page where you can leave comments.
+
+At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
+
 ### Upload Post Page
 
 ### Edit Blog Page
@@ -35,3 +47,6 @@ Lastly at the bottom of the home page, you will find the footer. I kept this ver
 ### Sign In/Out Page
 
 ### Register An Account Page
+
+
+color scheme
