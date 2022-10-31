@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
+STATUS = ((0, 'Draft'), (1, 'Published'))
+
 
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
@@ -15,6 +17,7 @@ class Post(models.Model):
     primary_image = CloudinaryField('image', default='placeholder')
     extract = models.CharField(max_length=300)
     category = models.CharField(max_length=75)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     def get_absolute_url(self):
         return reverse('home')
