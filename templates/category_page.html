@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 {% if posts %}
     <div class="container mt-5">
         <div class="row">
             <h1 class="text-center">{{ type }}</h1>
+            <img src="{% static 'images/category-img.png' %}" alt="category image">
             {% for post in posts %}
             <div class="card col-lg-6 offset-lg-3 mb-3">
                 {% if 'placeholder' in post.primary_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top mt-3"
+                <img src="https://www.prixintrablog.com/wp-content/uploads/2020/05/Start-Food-Blog.jpg" class="card-img-top mt-3"
                             alt="{{ post.title }}">
                 {% else %}
                 <img src="{{ post.primary_image.url }}" class="card-img-top mt-3" alt="{{ post.title }}">
