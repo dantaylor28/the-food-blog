@@ -29,7 +29,8 @@ Lastly at the bottom of the home page, you will find the footer. I kept this ver
 ![footer-pagination-img](static/images-readme/footer-pagination-img.png)
 
 ## Full Blog Post Page
-(Blog Post Image)
+
+![full-post-img](static/images-readme/full-post-img.png)
 
 When a user clicks on a link to open a post fully, they are greeted with a fully formatted, traditonal blog post layout. The blog title is displayed in a large header tag at the top of the page, with further information stating the author and when the post was created/last updated.
 
@@ -40,6 +41,8 @@ As blogs have to be approved by the admin before publication, this helps to ensu
 Directly under the blog content, is a like button and a section containing the comments. Here it once again shows the number of likes the post, but this time also with the ability to like the post yourself. You can click the like button only if you are signed in. If not, there is a comment explaining this and a link that will take you to the 'Register for an account' page.
 
 The same applies as above for the comments section. Any comments the post has received already are displayed here, along with the name of the user and the date it was made. If you are a signed in user, you can click the 'Add comment' button and be taken to the page where you can leave comments.
+
+![full-post-comments-img](static/images-readme/full-post-comments-img.png)
 
 At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
 
