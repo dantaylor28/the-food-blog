@@ -15,16 +15,25 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'extract', 'category', 'slug', 'author', 'body', 'primary_image')
+        fields = (
+            'title', 'extract', 'category', 'slug', 'author', 'body', 'primary_image')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Blog Title:'}),
             'extract': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Brief Description Of Post:'}),
             'category': forms.Select(choices=categories, attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'id': 'author', 'value': '', 'type': 'hidden'}),
             'body': SummernoteWidget(attrs={'summernote': {'width': '95%'}}),
         }
+
+        title = (
+            forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Blog Title:'
+                }
+            )
+        )
 
         primary_image = CloudinaryFileField()
 
