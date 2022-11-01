@@ -25,15 +25,29 @@
                     </a>
                     <div class="text-muted mb-3">
                         <div>
-                            <span>By: {{ post.author }} |</span>
+                            <span>By: {{ post.author.first_name }} |</span>
                             <span>Published On: {{ post.published_on }}</span>
                         </div>
                         <div>
-                            <span>to add tags</span>
+                            {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                    <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
+                                    <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
+                                {% endif %}
+                            {% endif %}
                         </div>
                     </div>
                     <p class="card-text">{{ post.extract }}</p>
                     <a href="{% url 'post_view' post.slug %}" class="btn bright-btn">Read This Post</a>
+                    <span class="card-like-btn">
+                        <i class="fa-solid fa-heart like-btn heart-crack"></i>
+                        <strong><span class="mgn-spc">{{ post.num_of_likes }}</span></strong>
+                        {% if post.num_of_likes == 1 %}
+                            <span> person likes this</span>
+                        {% else %}
+                            <span> people like this</span>
+                        {% endif %}
+                    </span>
                     {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
                             <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
