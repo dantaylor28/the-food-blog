@@ -7,7 +7,7 @@ Add A Comment
 <div class="container mt-5">
     <div class="row">
         {% if user.is_authenticated %}
-            <h4>Fill in the form below to post a comment</h4>
+            <h4 class="brown-txt">Fill in the form below to post a comment</h4>
             <hr><br>
             <form method="POST">
                 {% csrf_token %}
