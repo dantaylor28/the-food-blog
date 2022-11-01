@@ -8,7 +8,8 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='blog')
     published_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateField(auto_now=True)
     body = models.TextField()
@@ -50,7 +51,8 @@ class Label(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
     body = models.TextField()
     date_commented = models.DateTimeField(auto_now_add=True)
