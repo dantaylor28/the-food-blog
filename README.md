@@ -77,19 +77,22 @@ The edit post page can be accessed either on the home page or at the bottom of t
 This page is very similar to the previous 'Upload a Blog' page, with just a few minor differences. The edit page lets you change everything except the slug field. All of the content that you have wrote here previously is present, and you are free to change whatever you like and then click the update button. Any changes will be saved and you will then be redirected to the home page with a freshly updated post.
 
 ## Delete Blog Page
-(Delete post page pic)
+
+![delete-post-img](static/images-readme/delete-post-img.png)
 
 Very similar to the edit page above, this option is only available to authors of the particular post. Clicking this button redirects you to a seperate delete page, where you then need to confirm your decision by clicking 'Delete post'. This page contains nothing more than a button and a message stating this decision cannot be changed. Once deleted, your post is removed from the database and will consequently disappear from the website.
 
 ## Commenting Page
-(comment section pic)
+
+![add-comment-img](static/images-readme/add-comment-img.png)
 
 If you are signed in and wish to comment on a blog post, you will find a button at the bottom of any post which when clicked takes you to the add comment page. In order to stop the page becoming too congested, I decided to add this feature on a seperate HTML page. 
 
 It is a simple form page, with just two fields. One for your name and another for the comment. If you wish to stay anonymous, you can leave the name field blank or input something different than your real name. When you click post comment, you are redirected and the comment will be posted to the corresponding blog post, with the name you rovided and the date you wrote it.
 
 ## Sign In/Out Page
-(signin/out pages pic)
+
+![sign-in-img](static/images-readme/sign-in-img.png)
 
 For all the authentication on this blog site, I used the Django AllAuth built in authentication system. This comes with already made html pages for signing in and out. These pages can be accessed and edited which I have the documented steps outlined further on in this read-me. 
 
@@ -98,14 +101,16 @@ The sign-in page consists of a message welcoming you back to the blog and a link
 The sign-out page is just as simple, consisting of only a message asking if you're sure you want to log out and a sign-out button.
 
 ## Register An Account Page
-(register account pic)
+
+![register-account-img](static/images-readme/register-account-img.png)
 
 Registering for an account uses the same AllAuth authentication system as above. This page contains four form fields, a username, an optional email field, a password and a repeat password box. 
 
 There is a welcome message at the top of the page which also has a link incase you have an account registered with us already. The username input has to be unique to yourself, and optionally you can also provide us with an email address. Lastly, there is a standard password field which you have to repeat in a second box. Once the form is filled in, click the sign-up button and then registration is complete.
 
 ## The Admin Panel
-(admin panel pic)
+
+![admin-panel-img](static/images-readme/admin-panel-img.png)
 
 One of the first steps undertaken in development was the creation of the administration panel and registering the admin superuser. This account then has full CRUD functionality over every post and comment on the website. 
 
