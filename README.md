@@ -239,13 +239,20 @@ Unfortunately, I did not have the time to implement any automatic testing in thi
 
 ### Index.html
 ![index-lighthouse-img](static/images-readme/index-lighthouse.png)
-### full_post.html
+### Full_post.html
 ![full-post-lighthouse](static/images-readme/full-post-lighthouse.png)
 - The accessibility and SEO suffered on the full_post.html pages. This was laregly due to the fact that the bootstrap buttons did not have an accessible name and me being unable to add alt tags to the images on the page. These images were added through the create_post form on the front end so consequently, there was no way i could find to alt tags.
-### category_page.html
+### Category_page.html
 ![category-page-lighthouse](static/images-readme/category-page-lighthouse.png)
 - On this page it was the performance that suffered the most. The largest contentful paint and the cumulative layour shift were the two areas that brought this score down.
-
+### Create_post.html
+![create-post-lighthouse](static/images-readme/create_post-lighthouse.png)
+### Edit_post.html
+![edit-page-lighthouse](static/images-readme/edit-post-lighthouse.png)
+### Delete_post.html
+![delete-page-lighthouse](static/images-readme/delete-post-lighthouse.png)
+### Add_comment.html
+![comment-page-lighthouse](static/images-readme/add-comment-lighthouse.png)
 
 # Bugs
 
