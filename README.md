@@ -47,7 +47,8 @@ The same applies as above for the comments section. Any comments the post has re
 At the very bottom of the page is one last button, that if clicked will take you back to the homepage. 
 
 ## Blog Category Page
-(blog category pic)
+
+![blog-categories-img](static/images-readme/blog-categories-img.png)
 
 From the navigation menu at the top of the website, you can use the dropdown 'Browse Categories' to pick what type of blogs or recipes you would like to see. When you have made a selection, you will be taken to the categories section of the website.
 
@@ -56,7 +57,8 @@ At the top of the page, you are greeted with a large banner image along with the
 The page layout is very similar to the home page, the obvious exception to this being that you can now easily find a specific recipe or cuisine much faster than scrolling through the entirety of the site.
 
 ## Upload Blog Page
-(Upload blog image)
+
+
 
 When you are all signed up with an account, the 'Upload Post' page will then become available for you to use! This is the page you will be using to uplaod all of your wonderful recipe ideas. 
 
