@@ -58,7 +58,7 @@ The page layout is very similar to the home page, the obvious exception to this 
 
 ## Upload Blog Page
 
-
+![create-post-img](static/images-readme/create-post-img.png)
 
 When you are all signed up with an account, the 'Upload Post' page will then become available for you to use! This is the page you will be using to uplaod all of your wonderful recipe ideas. 
 
@@ -69,7 +69,8 @@ Underneath the slug field, is the main body of the blog post that you will creat
 The last field on the form is the ability to attach a picture which will feature as the primary image on the home screen of the website. It is not possible to see an example of how it will look so its quite important that the image you use is the correct size so it is not altered in any way. If it does not come out as expected, theres no need to worry as this can be swapped out easily in the edit page which is described in more detail below.
 
 ## Edit Blog Page
-(Edit post page pic)
+
+![edit-post-img](static/images-readme/edit-post-img.png)
 
 The edit post page can be accessed either on the home page or at the bottom of the actual blog post when it is opened fully. Only you who wrote the post has access to this page so you don't have to worry about anybody else editing or deleting your blogs.
 
