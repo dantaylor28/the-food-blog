@@ -49,12 +49,6 @@
                             <span> people like this</span>
                         {% endif %}
                     </span>
-                    {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-                            <span><a href="{% url 'edit_post' post.slug %}" class="btn brown-btn btn-sm">Edit</a></span>
-                            <span><a href="{% url 'delete_post' post.slug %}" class="btn brown-btn btn-sm">Delete</a></span>
-                        {% endif %}
-                    {% endif %}
                 </div>
             </div>
             {% endfor %}
