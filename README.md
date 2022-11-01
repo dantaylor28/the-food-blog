@@ -4,7 +4,7 @@ The website I decided to make is a food blog which lets users visiting the site,
 
 Users have the ability to register for an account and this will then allow them to like and comment on blog posts as well as giving them the ability to upload their very own posts and recipes. Any blogs uploaded by users will need to be verified and published by the site admin before it becomes live on the website. This is to ensure the content is relevant and that we do not become a platform where offensive or discriminatory views are being spread amongst our community. Comments are free to be posted by any registered users, but they too will be monitored for any remarks that breach our community standards.
 
-(Insert AmIResponsive image here)
+![am-i-responsive](static/images-readme/amiresponsive-img.png)
 
 # Current Features
 
@@ -166,7 +166,7 @@ To allow users to upload a fully formatted blog post, with customisable text, st
 
 I looked through many different websites to try and gather some ideas for implementing color into the site. I eventually decided on my own take of the below color scheme. I wanted to use bright, vibrant colours that would attract peoples attention and fit the vibe of the recipe/food blog.
 
-(color scheme pic here)
+![color-scheme-img](static/images-readme/color-scheme-img.png)
 
 # Deployment
 
