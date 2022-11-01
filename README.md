@@ -227,9 +227,19 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 ## Automatic Testing
 
+Unfortunately, I did not have the time to implement any automatic testing in this project. This is something that I definitely want to come back and add at the first given opportunity. 
+
 ## Validator Testing
 
+- When running my HTML code through the W3C validator, some errors do show up but they are all in regards to the use of jinja templating language throughout the HTML code. I do not see a way to correct these errors without messing up my code significantly. In the future I will most definitely leave myself enough time to work my way through these errors.
+
+- All CSS code passes throough the W3C validator with no issues.
+
 ## Lighthouse Results
+
+![index-lighthouse-img](static/images-readme/index-lighthouse.png)
+![full-post-lighthouse](static/images-readme/full-post-lighthouse.png)
+- The accessibility and SEO suffered on the full_post.html pages. This was laregly due to the fact that the bootstrap buttons did not have an accessible name and me being unable to add alt tags to the images on the page. These images were added through the create_post form on the front end so consequently, there was no way i could find to alt tags.
 
 # Bugs
 
