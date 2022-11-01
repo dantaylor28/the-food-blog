@@ -225,6 +225,27 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 
 ## Manual Testing
 
+Throughout the development, manual testing has been carried out by myself and also by my friends and family to document any bugs in the code. 
+
+* All the code has been put through the appropriate validators
+* Tested using Safari, Chrome and Firefox
+* Blog posts have been created on multiple different devices
+* Editing and deletions of blog posts have also been tested on different devices
+* Comments have been posted by myself and others throughout development 
+* Commenting has been tested on different devices to ensure it works as expected 
+* The ability to like/unlike a post has been tried and tested on different devices and screen sizes
+
+If statements were used quite extensively throughout the project, to ensure only the correct user can perform certain actions. These are outlined in more detail below - 
+- The statement that ensures only logged in users can like and comment on posts is working as expected
+- The if statement that checks to see if you are signed in before you can create a post has been tested and works as expected.
+- Only the author of the post and the site admin can make any edits or deletions pertaining to that specific blog post works as expected.
+- If an unauthorised user stumbles upon a webpage they should not have access to, an erro page displays as expected linking them back to the appropriate section of the website.
+
+The authentication system has been tested appropriately to ensure - 
+- You can sign in and out without any errors
+- When you register for an account, it works as expected and doesn't throw any errors
+- The same username cannot be used more than once
+
 ## Automatic Testing
 
 Unfortunately, I did not have the time to implement any automatic testing in this project. This is something that I definitely want to come back and add at the first given opportunity. 
