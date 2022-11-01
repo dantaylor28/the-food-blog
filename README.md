@@ -245,3 +245,5 @@ The link to my live website can be found at - https://pp4-food-blog.herokuapp.co
 - I used the following website to decide on what color scheme to implement for my ptoject -
 https://webflow.com/blog/best-color-combinations
 
+- BBCGoodFood was used for the steak and chips and for the carbonara recipe.
+
