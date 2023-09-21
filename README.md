@@ -118,8 +118,8 @@ Upon doing this I also customised the admin panel to make it easier to manage po
 
 The login for the superuser account is as follows -
 
-***Username - admin***\
-***Password - esporta1993***
+***Username - n/a
+***Password - n/a
 
 # Future Features To Implement
 
