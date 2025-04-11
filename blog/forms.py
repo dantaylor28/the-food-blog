@@ -42,12 +42,12 @@ class PostForm(forms.ModelForm):
 
         primary_image = CloudinaryFileField()
 
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            self.fields['category'].widget = forms.Select(
-                choices=[(cat.name, cat.name) for cat in Category.objects.all()],
-                attrs={'class': 'form-control'}
-        )
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].widget = forms.Select(
+            choices=[(cat.name, cat.name) for cat in Category.objects.all()],
+            attrs={'class': 'form-control'}
+    )
 
 
 class EditForm(forms.ModelForm):
@@ -66,12 +66,12 @@ class EditForm(forms.ModelForm):
 
         primary_image = CloudinaryFileField()
 
-        def __init__(self, *args, **kwargs):
-            super().__init__(*args, **kwargs)
-            self.fields['category'].widget = forms.Select(
-                choices=[(cat.name, cat.name) for cat in Category.objects.all()],
-                attrs={'class': 'form-control'}
-        )
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].widget = forms.Select(
+            choices=[(cat.name, cat.name) for cat in Category.objects.all()],
+            attrs={'class': 'form-control'}
+    )
 
 
 class CommentForm(forms.ModelForm):

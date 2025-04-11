@@ -32,7 +32,7 @@ DEBUG = os.environ.get('DEVELOPMENT') == 'True'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['pp4-food-blog.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['pp4-food-blog.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
